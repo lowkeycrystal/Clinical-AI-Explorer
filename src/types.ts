@@ -1,0 +1,16 @@
+export interface AITool {
+  id: string;
+  name: string;
+  vendor: string;
+  users: string[];
+  type: string[];
+  category: string;
+  workflow: string;
+  problemSolved: string;
+  successRate: string;
+  status: 'Active' | 'Inactive' | 'Acquired' | string;
+  year: string;
+  useCases: string[];
+  issues: string;
+  legalCases: string;
+}
