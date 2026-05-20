@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { aiTools } from './data';
 import { AITool } from './types';
+import logo from './assets/logo.png';
 import { Search, Filter, Stethoscope, Activity, Building, Users, Server, AlertCircle, CheckCircle2, XCircle, Info, ExternalLink } from 'lucide-react';
 
 export default function App() {
@@ -32,7 +33,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden shadow-inner bg-slate-100 relative">
-              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Xillium Logo" className="w-full h-full object-cover relative z-10" onError={(e) => (e.currentTarget.style.display = 'none')} />
+              <img src={logo} alt="Xillium Logo" className="w-full h-full object-cover relative z-10" onError={(e) => (e.currentTarget.style.display = 'none')} />
               <Activity className="w-6 h-6 text-blue-600 absolute" />
             </div>
             <div>
