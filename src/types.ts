@@ -13,4 +13,6 @@ export interface AITool {
   useCases: string[];
   issues: string;
   legalCases: string;
+  aiSupportLevel: 'Full AI Replacement' | 'Partial AI Support';
+  aiSupportLevelExplanation: string;
 }

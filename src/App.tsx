@@ -199,6 +199,13 @@ function ToolDetails({ tool, onClose }: { tool: AITool, onClose: () => void }) {
             </div>
           </DetailSection>
 
+          <DetailSection title="AI Support Level">
+            <div className="bg-indigo-50/50 p-4 rounded-lg border border-indigo-100 flex flex-col gap-2">
+               <span className="font-semibold text-indigo-900 inline-flex items-center gap-1.5"><Activity className="w-4 h-4" /> {tool.aiSupportLevel}</span>
+               <p className="text-sm text-indigo-800 leading-relaxed">{tool.aiSupportLevelExplanation}</p>
+            </div>
+          </DetailSection>
+
           <DetailSection title="Problem Solved">
             <p className="text-sm text-slate-700 leading-relaxed bg-white p-3 rounded-lg border border-slate-200 shadow-sm">{tool.problemSolved}</p>
           </DetailSection>

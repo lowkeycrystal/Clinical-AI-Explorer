@@ -15,7 +15,9 @@ export const aiTools: AITool[] = [
     year: "2020 - Present",
     useCases: ["Ambient clinical intelligence during visits", "Automated SOAP note generation", "EHR integration"],
     issues: "High cost of implementation, requires an adjustment period for clinicians to trust the AI's transcription accuracy, occasional errors in complex medical terminology.",
-    legalCases: "None significant; standard data privacy (HIPAA) compliance scrutiny."
+    legalCases: "None significant; standard data privacy (HIPAA) compliance scrutiny.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Drafts notes from ambient audio, but requires physician review, editing, and signature."
   },
   {
     id: "2",
@@ -31,7 +33,9 @@ export const aiTools: AITool[] = [
     year: "2012 - 2023",
     useCases: ["Automated prior authorization submissions", "Patient eligibility verification", "Supply chain management"],
     issues: "Failed to deliver on ROI promises for many customers, issues with software reliability and scalability, over-promised AI capabilities that ended up requiring heavy human-in-the-loop dependencies.",
-    legalCases: "Sued by multiple vendors for unpaid bills during its financial collapse in late 2023. Ultimately shut down and sold off assets."
+    legalCases: "Sued by multiple vendors for unpaid bills during its financial collapse in late 2023. Ultimately shut down and sold off assets.",
+    aiSupportLevel: "Full AI Replacement",
+    aiSupportLevelExplanation: "Designed to fully automate administrative tasks like prior authorizations with minimal human intervention, though it struggled in practice."
   },
   {
     id: "3",
@@ -47,7 +51,9 @@ export const aiTools: AITool[] = [
     year: "2016 - Present",
     useCases: ["Stroke detection", "Pulmonary embolism triage", "Aortic disease detection", "Care team coordination via mobile app"],
     issues: "False positives can lead to alarm fatigue. High reliance on the quality of the initial CT scan.",
-    legalCases: "Standard regulatory oversight. Holds FDA clearance, ensuring rigorous clinical trial evidence. No major controversies."
+    legalCases: "Standard regulatory oversight. Holds FDA clearance, ensuring rigorous clinical trial evidence. No major controversies.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "AI flags potential stroke cases and notifies doctors, but a specialist must review the scan to make the final clinical diagnosis."
   },
   {
     id: "4",
@@ -63,7 +69,9 @@ export const aiTools: AITool[] = [
     year: "2017 - Present",
     useCases: ["Denial prevention and recovery", "Automated provider credentialing", "Patient financial clearance"],
     issues: "Complex integration processes with legacy EHR systems. Steep learning curve for new billing staff.",
-    legalCases: "None documented outside of routine corporate compliance."
+    legalCases: "None documented outside of routine corporate compliance.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Automates the transmission and scoring of claims, but requires human billing staff to handle complex denials and exceptions."
   },
   {
     id: "5",
@@ -79,7 +87,9 @@ export const aiTools: AITool[] = [
     year: "2017 - Present",
     useCases: ["Voice-dictated clinical notes", "ICD-10 coding assistance", "EHR data retrieval via voice command"],
     issues: "Voice recognition struggles with heavy accents or very noisy clinic environments.",
-    legalCases: "Compliant with HIPAA. No major controversies."
+    legalCases: "Compliant with HIPAA. No major controversies.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Assists with note creation and coding, but the physician must review the final output and sign the chart."
   },
   {
     id: "6",
@@ -95,7 +105,9 @@ export const aiTools: AITool[] = [
     year: "2016 - Present",
     useCases: ["Cardiac arrest detection over phone", "Post-call documentation", "Quality assurance and training"],
     issues: "Requires high-quality audio feeds, can be affected by ambient chaos or poor connection.",
-    legalCases: "Requires strict adherence to international data privacy laws (GDPR/HIPAA) regarding audio recordings, but no major lawsuits."
+    legalCases: "Requires strict adherence to international data privacy laws (GDPR/HIPAA) regarding audio recordings, but no major lawsuits.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Listens to 911 calls and suggests diagnoses, but the human dispatcher retains full control over triage and response decisions."
   },
   {
     id: "7",
@@ -111,7 +123,9 @@ export const aiTools: AITool[] = [
     year: "2018 - Present",
     useCases: ["Ambient listening", "Structured medical note generation", "Deep EHR integration (Epic)"],
     issues: "Requires comprehensive clinical review by the physician to ensure no critical omissions. Occasional misinterpretation of overlapping dialogue in noisy rooms.",
-    legalCases: "Complies with HIPAA; no major lawsuits documented."
+    legalCases: "Complies with HIPAA; no major lawsuits documented.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Automatically generates draft clinical notes from visit audio, but relies on the physician to edit and finalize the note."
   },
   {
     id: "8",
@@ -127,7 +141,9 @@ export const aiTools: AITool[] = [
     year: "2016 - Present",
     useCases: ["Intracranial hemorrhage detection", "Pulmonary embolism detection", "Incidental findings triage", "Care coordination for imaging"],
     issues: "Algorithm drift requires continuous monitoring. Integration can initially disrupt established radiologist workflows until they adapt to 'always-on' alerts.",
-    legalCases: "Operates under FDA regulation; no major litigation. Ensures rigid data de-identification agreements."
+    legalCases: "Operates under FDA regulation; no major litigation. Ensures rigid data de-identification agreements.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Analyzes radiology scans in the background to prioritize worklists, but does not autonomously produce a final diagnostic report."
   },
   {
     id: "9",
@@ -143,7 +159,9 @@ export const aiTools: AITool[] = [
     year: "2017 - Present",
     useCases: ["Digital mobile registration", "Pre-visit clinical intake", "Intelligent scheduling", "Prior authorization triage"],
     issues: "Success is heavily reliant on patients adopting mobile-first interfaces. Deep, custom integration with legacy EHR environments is resource-intensive.",
-    legalCases: "No major litigation. Adheres to standard enterprise BAA and HIPAA frameworks."
+    legalCases: "No major litigation. Adheres to standard enterprise BAA and HIPAA frameworks.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Automates patient communication and data entry, but clinic staff still review schedules and handle patient exceptions manually."
   },
   {
     id: "10",
@@ -159,7 +177,9 @@ export const aiTools: AITool[] = [
     year: "2020 - Present",
     useCases: ["Ambient clinical scribing", "Automated clinical coding generation", "Patient instruction generation"],
     issues: "Because no audio is stored (by design), clinicians cannot easily re-listen to encounters if the transcript misses nuances, forcing reliance on the initial AI capture.",
-    legalCases: "None. Heavily markets its strict privacy policies (does not train on customer data without consent), effectively lowering liability."
+    legalCases: "None. Heavily markets its strict privacy policies (does not train on customer data without consent), effectively lowering liability.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Drafts medical notes in real-time without storing audio. Physicians must review the text and take responsibility for its medical accuracy."
   },
   {
     id: "11",
@@ -175,7 +195,9 @@ export const aiTools: AITool[] = [
     year: "2015 - Present",
     useCases: ["Autonomous medical coding", "Denial reduction and predictive modeling", "Concurrent coding audits"],
     issues: "Requires massive sets of historical data specific to a health system's localized billing behaviors to achieve peak accuracy. Less effective in obscure super-specialties.",
-    legalCases: "Routine compliance with CMS coding guidelines. No major litigation."
+    legalCases: "Routine compliance with CMS coding guidelines. No major litigation.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Autonomously processes a large portion of medical coding, but falls back to human expert coders for complex or low-confidence charts."
   },
   {
     id: "12",
@@ -191,6 +213,8 @@ export const aiTools: AITool[] = [
     year: "2023 - Present",
     useCases: ["Post-discharge follow-up calls via voice AI", "Pre-operative instructions", "Chronic care management outreach calling"],
     issues: "Still in early deployment stages across the US. High scrutiny on patient acceptance of taking clinical instruction from 'AI nurses' over the phone.",
-    legalCases: "None. Formed specifically to counteract AI liability by heavily investing in safety/nursing benchmarks and utilizing human-in-the-loop oversight."
+    legalCases: "None. Formed specifically to counteract AI liability by heavily investing in safety/nursing benchmarks and utilizing human-in-the-loop oversight.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Conducts voice calls with patients for follow-ups, but relies on a rigid human-in-the-loop safety system to escalate issues to human nurses."
   }
 ];
