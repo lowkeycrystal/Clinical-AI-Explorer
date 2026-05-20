@@ -17,7 +17,8 @@ export const aiTools: AITool[] = [
     issues: "High cost of implementation, requires an adjustment period for clinicians to trust the AI's transcription accuracy, occasional errors in complex medical terminology.",
     legalCases: "None significant; standard data privacy (HIPAA) compliance scrutiny.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Drafts notes from ambient audio, but requires physician review, editing, and signature."
+    aiSupportLevelExplanation: "Drafts notes from ambient audio, but requires physician review, editing, and signature.",
+    domain: "Clinical"
   },
   {
     id: "2",
@@ -35,7 +36,8 @@ export const aiTools: AITool[] = [
     issues: "Failed to deliver on ROI promises for many customers, issues with software reliability and scalability, over-promised AI capabilities that ended up requiring heavy human-in-the-loop dependencies.",
     legalCases: "Sued by multiple vendors for unpaid bills during its financial collapse in late 2023. Ultimately shut down and sold off assets.",
     aiSupportLevel: "Full AI Replacement",
-    aiSupportLevelExplanation: "Designed to fully automate administrative tasks like prior authorizations with minimal human intervention, though it struggled in practice."
+    aiSupportLevelExplanation: "Designed to fully automate administrative tasks like prior authorizations with minimal human intervention, though it struggled in practice.",
+    domain: "Administrative"
   },
   {
     id: "3",
@@ -53,7 +55,8 @@ export const aiTools: AITool[] = [
     issues: "False positives can lead to alarm fatigue. High reliance on the quality of the initial CT scan.",
     legalCases: "Standard regulatory oversight. Holds FDA clearance, ensuring rigorous clinical trial evidence. No major controversies.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "AI flags potential stroke cases and notifies doctors, but a specialist must review the scan to make the final clinical diagnosis."
+    aiSupportLevelExplanation: "AI flags potential stroke cases and notifies doctors, but a specialist must review the scan to make the final clinical diagnosis.",
+    domain: "Clinical"
   },
   {
     id: "4",
@@ -71,7 +74,8 @@ export const aiTools: AITool[] = [
     issues: "Complex integration processes with legacy EHR systems. Steep learning curve for new billing staff.",
     legalCases: "None documented outside of routine corporate compliance.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Automates the transmission and scoring of claims, but requires human billing staff to handle complex denials and exceptions."
+    aiSupportLevelExplanation: "Automates the transmission and scoring of claims, but requires human billing staff to handle complex denials and exceptions.",
+    domain: "Administrative"
   },
   {
     id: "5",
@@ -89,7 +93,8 @@ export const aiTools: AITool[] = [
     issues: "Voice recognition struggles with heavy accents or very noisy clinic environments.",
     legalCases: "Compliant with HIPAA. No major controversies.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Assists with note creation and coding, but the physician must review the final output and sign the chart."
+    aiSupportLevelExplanation: "Assists with note creation and coding, but the physician must review the final output and sign the chart.",
+    domain: "Clinical"
   },
   {
     id: "6",
@@ -107,7 +112,8 @@ export const aiTools: AITool[] = [
     issues: "Requires high-quality audio feeds, can be affected by ambient chaos or poor connection.",
     legalCases: "Requires strict adherence to international data privacy laws (GDPR/HIPAA) regarding audio recordings, but no major lawsuits.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Listens to 911 calls and suggests diagnoses, but the human dispatcher retains full control over triage and response decisions."
+    aiSupportLevelExplanation: "Listens to 911 calls and suggests diagnoses, but the human dispatcher retains full control over triage and response decisions.",
+    domain: "Administrative"
   },
   {
     id: "7",
@@ -125,7 +131,8 @@ export const aiTools: AITool[] = [
     issues: "Requires comprehensive clinical review by the physician to ensure no critical omissions. Occasional misinterpretation of overlapping dialogue in noisy rooms.",
     legalCases: "Complies with HIPAA; no major lawsuits documented.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Automatically generates draft clinical notes from visit audio, but relies on the physician to edit and finalize the note."
+    aiSupportLevelExplanation: "Automatically generates draft clinical notes from visit audio, but relies on the physician to edit and finalize the note.",
+    domain: "Clinical"
   },
   {
     id: "8",
@@ -143,7 +150,8 @@ export const aiTools: AITool[] = [
     issues: "Algorithm drift requires continuous monitoring. Integration can initially disrupt established radiologist workflows until they adapt to 'always-on' alerts.",
     legalCases: "Operates under FDA regulation; no major litigation. Ensures rigid data de-identification agreements.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Analyzes radiology scans in the background to prioritize worklists, but does not autonomously produce a final diagnostic report."
+    aiSupportLevelExplanation: "Analyzes radiology scans in the background to prioritize worklists, but does not autonomously produce a final diagnostic report.",
+    domain: "Clinical"
   },
   {
     id: "9",
@@ -161,7 +169,8 @@ export const aiTools: AITool[] = [
     issues: "Success is heavily reliant on patients adopting mobile-first interfaces. Deep, custom integration with legacy EHR environments is resource-intensive.",
     legalCases: "No major litigation. Adheres to standard enterprise BAA and HIPAA frameworks.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Automates patient communication and data entry, but clinic staff still review schedules and handle patient exceptions manually."
+    aiSupportLevelExplanation: "Automates patient communication and data entry, but clinic staff still review schedules and handle patient exceptions manually.",
+    domain: "Administrative"
   },
   {
     id: "10",
@@ -179,7 +188,8 @@ export const aiTools: AITool[] = [
     issues: "Because no audio is stored (by design), clinicians cannot easily re-listen to encounters if the transcript misses nuances, forcing reliance on the initial AI capture.",
     legalCases: "None. Heavily markets its strict privacy policies (does not train on customer data without consent), effectively lowering liability.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Drafts medical notes in real-time without storing audio. Physicians must review the text and take responsibility for its medical accuracy."
+    aiSupportLevelExplanation: "Drafts medical notes in real-time without storing audio. Physicians must review the text and take responsibility for its medical accuracy.",
+    domain: "Clinical"
   },
   {
     id: "11",
@@ -197,7 +207,8 @@ export const aiTools: AITool[] = [
     issues: "Requires massive sets of historical data specific to a health system's localized billing behaviors to achieve peak accuracy. Less effective in obscure super-specialties.",
     legalCases: "Routine compliance with CMS coding guidelines. No major litigation.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Autonomously processes a large portion of medical coding, but falls back to human expert coders for complex or low-confidence charts."
+    aiSupportLevelExplanation: "Autonomously processes a large portion of medical coding, but falls back to human expert coders for complex or low-confidence charts.",
+    domain: "Administrative"
   },
   {
     id: "12",
@@ -215,6 +226,83 @@ export const aiTools: AITool[] = [
     issues: "Still in early deployment stages across the US. High scrutiny on patient acceptance of taking clinical instruction from 'AI nurses' over the phone.",
     legalCases: "None. Formed specifically to counteract AI liability by heavily investing in safety/nursing benchmarks and utilizing human-in-the-loop oversight.",
     aiSupportLevel: "Partial AI Support",
-    aiSupportLevelExplanation: "Conducts voice calls with patients for follow-ups, but relies on a rigid human-in-the-loop safety system to escalate issues to human nurses."
+    aiSupportLevelExplanation: "Conducts voice calls with patients for follow-ups, but relies on a rigid human-in-the-loop safety system to escalate issues to human nurses.",
+    domain: "Clinical"
+  },
+  {
+    id: "13",
+    name: "Tempus",
+    vendor: "Tempus Labs",
+    users: ["Mayo Clinic", "Duke Health", "Northwestern Medicine", "MD Anderson"],
+    type: ["Hospitals", "Health Systems", "Specialty Clinics"],
+    category: "Diagnostics",
+    workflow: "Precision Medicine & Oncology",
+    problemSolved: "Aggregates massive amounts of multimodal data (clinical and genomic) to support physicians in making data-driven treatment decisions for cancer patients.",
+    successRate: "Connected to over 2,000 hospitals in the US. The platform accelerates the discovery of optimal targeted therapies for oncology patients.",
+    status: "Active",
+    year: "2015 - Present",
+    useCases: ["Genomic sequencing analysis", "Clinical trial matching", "Predictive modeling for oncology"],
+    issues: "Requires immense data sharing agreements which can sometimes raise privacy concerns. Complex integration requires significant IT uplift.",
+    legalCases: "Standard privacy scrutiny due to the handling of highly sensitive genomic data, though anonymization protocols are strictly enforced.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Provides data-driven recommendations and matches for clinical trials, but oncologists make all final treatment decisions.",
+    domain: "Clinical"
+  },
+  {
+    id: "14",
+    name: "Qventus",
+    vendor: "Qventus",
+    users: ["Banner Health", "HonorHealth", "OhioHealth", "Mercy"],
+    type: ["Hospitals", "Health Systems"],
+    category: "Operations",
+    workflow: "Care Operations & Discharge",
+    problemSolved: "Inefficiencies in hospital capacity management, leading to bottlenecks in discharge planning and emergency department overcrowding.",
+    successRate: "Demonstrated early discharge times by 0.5-0.8 days per patient, significantly increasing bed capacity and reducing length of stay.",
+    status: "Active",
+    year: "2012 - Present",
+    useCases: ["Automated discharge planning", "OR scheduling optimization", "Inpatient capacity forecasting"],
+    issues: "Staff compliance is critical; if nurses or case managers ignore the AI's recommendations, hospital flow does not improve.",
+    legalCases: "No major legal controversies. Follows standard enterprise SLA and HIPAA rules.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Provides predictive alerts and discharge scheduling recommendations, but human case managers coordinate the physical discharge.",
+    domain: "Administrative"
+  },
+  {
+    id: "15",
+    name: "PathAI",
+    vendor: "PathAI",
+    users: ["Labcorp", "Cleveland Clinic", "Quest Diagnostics"],
+    type: ["Laboratories", "Hospitals", "Researchers"],
+    category: "Diagnostics",
+    workflow: "Pathology & Lab Medicine",
+    problemSolved: "High variability and long turnaround times in the manual interpretation of tissue samples (e.g., cancer biopsies).",
+    successRate: "Trained on millions of pathology slides, demonstrating high accuracy in quantifying novel biomarkers for drug development and diagnostics.",
+    status: "Active",
+    year: "2016 - Present",
+    useCases: ["AI-based scoring of biopsies", "Companion diagnostics", "Translational research"],
+    issues: "Slow adoption among older pathologists concerned with AI displacement. Requires digitization of slides, which many labs are still completing.",
+    legalCases: "No major litigation. Holds multiple regulatory clearances globally.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Highlights regions of interest on pathology slides, but a board-certified pathologist must issue the final diagnosis.",
+    domain: "Clinical"
+  },
+  {
+    id: "16",
+    name: "Symplr",
+    vendor: "Symplr",
+    users: ["Trinity Health", "HCA Healthcare", "Kaiser Permanente"],
+    type: ["Hospitals", "Health Systems"],
+    category: "Operations",
+    workflow: "Workforce Management & Credentialing",
+    problemSolved: "Highly fragmented administrative workflows in managing provider credentialing, compliance, and nurse scheduling.",
+    successRate: "Used by 9 out of 10 US hospitals in some capacity. Streamlines credentialing timelines from months to weeks.",
+    status: "Active",
+    year: "2006 - Present",
+    useCases: ["Provider credentialing automation", "Clinical workforce scheduling", "Vendor compliance tracking"],
+    issues: "The platform is heavily comprised of acquired technologies, leading to occasional integration friction between modules.",
+    legalCases: "Standard enterprise disputes. No systemic AI-related litigation.",
+    aiSupportLevel: "Partial AI Support",
+    aiSupportLevelExplanation: "Consolidates and automates credential data gathering, but human administrators still sign off on final approvals.",
+    domain: "Administrative"
   }
 ];

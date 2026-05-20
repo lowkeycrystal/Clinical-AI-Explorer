@@ -7,15 +7,18 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedDomain, setSelectedDomain] = useState<string>('All');
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
+  const domains = ['All', ...Array.from(new Set(aiTools.map(t => t.domain)))];
 
   const filteredTools = aiTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           tool.vendor.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           tool.workflow.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesDomain = selectedDomain === 'All' || tool.domain === selectedDomain;
+    return matchesSearch && matchesCategory && matchesDomain;
   });
 
   return (
@@ -55,23 +58,44 @@ export default function App() {
         <div className="flex-1 shrink-0 overflow-y-auto">
           
           {/* Filters */}
-          <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-2 scrollbar-none">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-100 rounded-md">
-              <Filter className="w-3.5 h-3.5" /> Filter Category
+          <div className="flex flex-col gap-3 mb-6">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-100 rounded-md shrink-0">
+                <Filter className="w-3.5 h-3.5" /> Domain
+              </div>
+              {domains.map(dom => (
+                <button
+                  key={dom}
+                  onClick={() => setSelectedDomain(dom)}
+                  className={`whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+                    selectedDomain === dom 
+                    ? 'bg-indigo-600 text-white shadow-sm' 
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                  }`}
+                >
+                  {dom}
+                </button>
+              ))}
             </div>
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-                  selectedCategory === cat 
-                  ? 'bg-blue-600 text-white shadow-sm' 
-                  : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider bg-slate-100 rounded-md shrink-0">
+                <Filter className="w-3.5 h-3.5" /> Category
+              </div>
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+                    selectedCategory === cat 
+                    ? 'bg-blue-600 text-white shadow-sm' 
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
 
           {filteredTools.length === 0 ? (
@@ -108,6 +132,9 @@ export default function App() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-indigo-50 text-indigo-700 text-xs font-medium border border-indigo-100">
+                      {tool.domain}
+                    </span>
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-100 text-slate-600 text-xs font-medium">
                       <Stethoscope className="w-3 h-3" /> {tool.category}
                     </span>
@@ -163,9 +190,16 @@ function StatusBadge({ status }: { status: string }) {
       <CheckCircle2 className="w-3 h-3" /> Active
     </span>
   }
-  return <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200">
-      <XCircle className="w-3 h-3" /> {status}
-    </span>
+  return (
+    <div className="group relative z-10 flex">
+      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200 cursor-help">
+        <XCircle className="w-3 h-3" /> {status}
+      </span>
+      <div className="absolute top-full mt-2 right-0 hidden group-hover:block w-48 bg-slate-800 text-slate-100 text-xs p-2 rounded shadow-lg pointer-events-none before:content-[''] before:absolute before:-top-1 before:right-4 before:w-2 before:h-2 before:bg-slate-800 before:rotate-45">
+        Historical context: Included to show past market attempts in operations/automation.
+      </div>
+    </div>
+  )
 }
 
 function ToolDetails({ tool, onClose }: { tool: AITool, onClose: () => void }) {

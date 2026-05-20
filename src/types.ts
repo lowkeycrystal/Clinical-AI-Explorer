@@ -15,4 +15,5 @@ export interface AITool {
   legalCases: string;
   aiSupportLevel: 'Full AI Replacement' | 'Partial AI Support';
   aiSupportLevelExplanation: string;
+  domain: 'Clinical' | 'Administrative' | 'Both';
 }
