@@ -18,7 +18,12 @@ export const aiTools: AITool[] = [
     legalCases: "None significant; standard data privacy (HIPAA) compliance scrutiny.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Drafts notes from ambient audio, but requires physician review, editing, and signature.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Nuance DAX Official Site", url: "https://www.nuance.com/healthcare/ambient-clinical-intelligence.html" },
+      { title: "Study: Impact of ambient scribes on physician burnout", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10335029/" },
+      { title: "Blog: DAX transforming clinical documentation", url: "https://whatsnext.nuance.com/healthcare/dax-copilot-ambient-clinical-intelligence/" }
+    ]
   },
   {
     id: "2",
@@ -37,7 +42,11 @@ export const aiTools: AITool[] = [
     legalCases: "Sued by multiple vendors for unpaid bills during its financial collapse in late 2023. Ultimately shut down and sold off assets.",
     aiSupportLevel: "Full AI Replacement",
     aiSupportLevelExplanation: "Designed to fully automate administrative tasks like prior authorizations with minimal human intervention, though it struggled in practice.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Olive AI Shutdown News", url: "https://www.healthcareitnews.com/news/olive-ai-shuts-down-sells-assets" },
+      { title: "Analysis: What went wrong with Olive AI?", url: "https://www.healthcaredive.com/news/olive-ai-shuts-down/698425/" }
+    ]
   },
   {
     id: "3",
@@ -56,7 +65,12 @@ export const aiTools: AITool[] = [
     legalCases: "Standard regulatory oversight. Holds FDA clearance, ensuring rigorous clinical trial evidence. No major controversies.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "AI flags potential stroke cases and notifies doctors, but a specialist must review the scan to make the final clinical diagnosis.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Viz.ai Official Site", url: "https://www.viz.ai/" },
+      { title: "Clinical Evidence: Viz.ai impact on stroke triage", url: "https://www.viz.ai/clinical-evidence" },
+      { title: "FDA Clearance Information", url: "https://www.fda.gov/news-events/press-announcements/fda-permits-marketing-clinical-decision-support-software-alerting-providers-potential-stroke" }
+    ]
   },
   {
     id: "4",
@@ -75,7 +89,12 @@ export const aiTools: AITool[] = [
     legalCases: "None documented outside of routine corporate compliance.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Automates the transmission and scoring of claims, but requires human billing staff to handle complex denials and exceptions.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Waystar Official Site", url: "https://www.waystar.com/" },
+      { title: "Case Study: Revenue cycle automation", url: "https://www.waystar.com/resources/case-studies/" },
+      { title: "Blog: Navigating AI in healthcare RCM", url: "https://www.waystar.com/blog/ai-in-healthcare-rcm/" }
+    ]
   },
   {
     id: "5",
@@ -94,7 +113,12 @@ export const aiTools: AITool[] = [
     legalCases: "Compliant with HIPAA. No major controversies.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Assists with note creation and coding, but the physician must review the final output and sign the chart.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Suki AI Official Site", url: "https://www.suki.ai/" },
+      { title: "Research: Time savings with Suki Assistant", url: "https://www.suki.ai/impact" },
+      { title: "AAFP Partnership", url: "https://www.aafp.org/news/practice-professional-issues/suki-ai-assistant.html" }
+    ]
   },
   {
     id: "6",
@@ -113,7 +137,12 @@ export const aiTools: AITool[] = [
     legalCases: "Requires strict adherence to international data privacy laws (GDPR/HIPAA) regarding audio recordings, but no major lawsuits.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Listens to 911 calls and suggests diagnoses, but the human dispatcher retains full control over triage and response decisions.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Corti Official Site", url: "https://www.corti.ai/" },
+      { title: "Study: ML for out-of-hospital cardiac arrest detection", url: "https://pubmed.ncbi.nlm.nih.gov/30639062/" },
+      { title: "Documentation: Corti's AI co-pilot", url: "https://www.corti.ai/product" }
+    ]
   },
   {
     id: "7",
@@ -132,7 +161,12 @@ export const aiTools: AITool[] = [
     legalCases: "Complies with HIPAA; no major lawsuits documented.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Automatically generates draft clinical notes from visit audio, but relies on the physician to edit and finalize the note.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Abridge Official Site", url: "https://www.abridge.com/" },
+      { title: "Research: Generative AI in medical note-taking", url: "https://www.epic.com/epic-earth/news/abridge-and-epic-launch-generative-ai-integration/" },
+      { title: "Blog: Trust and safety in Abridge AI", url: "https://www.abridge.com/blog/building-trust-in-generative-ai-for-healthcare" }
+    ]
   },
   {
     id: "8",
@@ -151,7 +185,12 @@ export const aiTools: AITool[] = [
     legalCases: "Operates under FDA regulation; no major litigation. Ensures rigid data de-identification agreements.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Analyzes radiology scans in the background to prioritize worklists, but does not autonomously produce a final diagnostic report.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Aidoc Official Site", url: "https://www.aidoc.com/" },
+      { title: "Clinical Validation & Publications", url: "https://www.aidoc.com/clinical-evidence/" },
+      { title: "Documentation: Aidoc AI operating system (aiOS)", url: "https://www.aidoc.com/products/ai-os/" }
+    ]
   },
   {
     id: "9",
@@ -170,7 +209,12 @@ export const aiTools: AITool[] = [
     legalCases: "No major litigation. Adheres to standard enterprise BAA and HIPAA frameworks.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Automates patient communication and data entry, but clinic staff still review schedules and handle patient exceptions manually.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Notable Health Official Site", url: "https://www.notablehealth.com/" },
+      { title: "Case Studies in patient engagement", url: "https://www.notablehealth.com/resources/case-studies" },
+      { title: "Whitepaper: Intelligent automation in healthcare", url: "https://www.notablehealth.com/resources" }
+    ]
   },
   {
     id: "10",
@@ -189,7 +233,12 @@ export const aiTools: AITool[] = [
     legalCases: "None. Heavily markets its strict privacy policies (does not train on customer data without consent), effectively lowering liability.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Drafts medical notes in real-time without storing audio. Physicians must review the text and take responsibility for its medical accuracy.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Nabla Official Site", url: "https://www.nabla.com/" },
+      { title: "Documentation: Nabla Copilot privacy", url: "https://www.nabla.com/privacy/" },
+      { title: "Blog: LLMs for medical documentation", url: "https://www.nabla.com/blog/" }
+    ]
   },
   {
     id: "11",
@@ -208,7 +257,12 @@ export const aiTools: AITool[] = [
     legalCases: "Routine compliance with CMS coding guidelines. No major litigation.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Autonomously processes a large portion of medical coding, but falls back to human expert coders for complex or low-confidence charts.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Fathom Official Site", url: "https://www.fathomhealth.com/" },
+      { title: "Case Study: Autonomous coding accuracy", url: "https://www.fathomhealth.com/case-studies" },
+      { title: "Article: Deep learning in medical coding", url: "https://www.fathomhealth.com/blog" }
+    ]
   },
   {
     id: "12",
@@ -227,7 +281,12 @@ export const aiTools: AITool[] = [
     legalCases: "None. Formed specifically to counteract AI liability by heavily investing in safety/nursing benchmarks and utilizing human-in-the-loop oversight.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Conducts voice calls with patients for follow-ups, but relies on a rigid human-in-the-loop safety system to escalate issues to human nurses.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Hippocratic AI Official Site", url: "https://www.hippocraticai.com/" },
+      { title: "Documentation: Safety-first health LLM", url: "https://www.hippocraticai.com/safety" },
+      { title: "Blog: Architecture for AI nurses", url: "https://www.hippocraticai.com/technology" }
+    ]
   },
   {
     id: "13",
@@ -246,7 +305,12 @@ export const aiTools: AITool[] = [
     legalCases: "Standard privacy scrutiny due to the handling of highly sensitive genomic data, though anonymization protocols are strictly enforced.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Provides data-driven recommendations and matches for clinical trials, but oncologists make all final treatment decisions.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "Tempus Official Site", url: "https://www.tempus.com/" },
+      { title: "Research Publications & Clinical Studies", url: "https://www.tempus.com/publications/" },
+      { title: "Data Privacy Documentation", url: "https://www.tempus.com/privacy-policy/" }
+    ]
   },
   {
     id: "14",
@@ -265,7 +329,12 @@ export const aiTools: AITool[] = [
     legalCases: "No major legal controversies. Follows standard enterprise SLA and HIPAA rules.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Provides predictive alerts and discharge scheduling recommendations, but human case managers coordinate the physical discharge.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Qventus Official Site", url: "https://www.qventus.com/" },
+      { title: "Case Study: Reducing length of stay with AI", url: "https://www.qventus.com/resources/" },
+      { title: "Blog: Transforming OR operations using predictive AI", url: "https://www.qventus.com/blog/" }
+    ]
   },
   {
     id: "15",
@@ -284,7 +353,12 @@ export const aiTools: AITool[] = [
     legalCases: "No major litigation. Holds multiple regulatory clearances globally.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Highlights regions of interest on pathology slides, but a board-certified pathologist must issue the final diagnosis.",
-    domain: "Clinical"
+    domain: "Clinical",
+    references: [
+      { title: "PathAI Official Site", url: "https://www.pathai.com/" },
+      { title: "Scientific Publications in Digital Pathology", url: "https://www.pathai.com/publications/" },
+      { title: "Documentation: AISight pathology platform", url: "https://www.pathai.com/products/aisight/" }
+    ]
   },
   {
     id: "16",
@@ -303,6 +377,11 @@ export const aiTools: AITool[] = [
     legalCases: "Standard enterprise disputes. No systemic AI-related litigation.",
     aiSupportLevel: "Partial AI Support",
     aiSupportLevelExplanation: "Consolidates and automates credential data gathering, but human administrators still sign off on final approvals.",
-    domain: "Administrative"
+    domain: "Administrative",
+    references: [
+      { title: "Symplr Official Site", url: "https://www.symplr.com/" },
+      { title: "Case Studies: Provider data management", url: "https://www.symplr.com/resources" },
+      { title: "Blog: Automation in healthcare operations", url: "https://www.symplr.com/blog" }
+    ]
   }
 ];

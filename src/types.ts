@@ -16,4 +16,5 @@ export interface AITool {
   aiSupportLevel: 'Full AI Replacement' | 'Partial AI Support';
   aiSupportLevelExplanation: string;
   domain: 'Clinical' | 'Administrative' | 'Both';
+  references?: { title: string; url: string }[];
 }

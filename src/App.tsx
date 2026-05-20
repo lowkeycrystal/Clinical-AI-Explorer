@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { aiTools } from './data';
 import { AITool } from './types';
-import { Search, Filter, Stethoscope, Activity, Building, Users, Server, AlertCircle, CheckCircle2, XCircle, Info } from 'lucide-react';
+import { Search, Filter, Stethoscope, Activity, Building, Users, Server, AlertCircle, CheckCircle2, XCircle, Info, ExternalLink } from 'lucide-react';
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -28,9 +28,9 @@ export default function App() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-10 w-full shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden shadow-inner bg-slate-100">
-              <img src="/logo.png" alt="Xillium Logo" className="w-full h-full object-cover" onError={(e) => (e.currentTarget.style.display = 'none')} />
-              <Activity className="w-6 h-6 text-blue-600 absolute -z-10" />
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden shadow-inner bg-slate-100 relative">
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Xillium Logo" className="w-full h-full object-cover relative z-10" onError={(e) => (e.currentTarget.style.display = 'none')} />
+              <Activity className="w-6 h-6 text-blue-600 absolute" />
             </div>
             <div>
               <h1 className="text-xl font-semibold tracking-tight text-slate-900">Xillium AI Tool Scout</h1>
@@ -293,6 +293,26 @@ function ToolDetails({ tool, onClose }: { tool: AITool, onClose: () => void }) {
           <DetailSection title="Legal & Compliance">
             <p className="text-sm text-slate-600 leading-relaxed">{tool.legalCases}</p>
           </DetailSection>
+
+          {tool.references && tool.references.length > 0 && (
+            <DetailSection title="References">
+              <ul className="space-y-2">
+                {tool.references.map((ref, i) => (
+                  <li key={i} className="text-sm">
+                    <a 
+                      href={ref.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1.5 font-medium"
+                    >
+                      {ref.title}
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </DetailSection>
+          )}
 
         </div>
       </div>
