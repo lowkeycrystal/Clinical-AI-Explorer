@@ -29,7 +29,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden shadow-inner bg-slate-100">
-              <img src="/logo.png" alt="Xillium Logo" className="w-full h-full object-cover" onError={(e) => (e.currentTarget.style.display = 'none')} />
+              <img src="public/logo.png" alt="Xillium Logo" className="w-full h-full object-cover" onError={(e) => (e.currentTarget.style.display = 'none')} />
               <Activity className="w-6 h-6 text-blue-600 absolute -z-10" />
             </div>
             <div>
